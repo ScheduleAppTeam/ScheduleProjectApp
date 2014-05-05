@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="GreetingsTextSize">250dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="SmallTextSize">10dp</dimen>
+	<dimen name="BasicTextSize">14dp</dimen>
+    <dimen name="TitleTextSize">25dp</dimen>
+    <dimen name="CommentsBlockTextSize">25dp</dimen>
+    <dimen name="CellPagging">5dp</dimen>
+    <dimen name="ButtonLeftMargin">10dp</dimen><dimen name="ButtonRightMargin">10dp</dimen><dimen name="ButtonBottomMargin">20dp</dimen><dimen name="LoginEditTextMarginLeft">10dp</dimen><dimen name="LoginEditTextMarginRight">10dp</dimen><dimen name="LoginTextViewMarginLeft">10dp</dimen>
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Расписание</string>
+    <string name="GreetingText">S</string>
+    <string name="title_activity_schedule">Расписание</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="GoToDate">Сегодня</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="LoginMoto">Расписание Занятий</string>
+    <string name="RegistrationButtonValue">Регистрация</string>
+    <string name="LoginButtonValue">Войти</string>
+    <string name="EmailLabelValue">E-mail</string>
+    <string name="PasswordLabelValue">Пароль</string>
+    <string name="TitleActivityRegistration">Регистрация</string>
+    <string name="FirstNameLabelValue">Имя</string>
+    <string name="SecondNameLabelValue">Фамилия</string>
+    <string name="PasswordRepeatLabelValue">Повторите пароль</string>
+    <string name="AutoUpdateLabelValue">Автообновление(минут)</string>
+    <string name="CancelButtonValue">Отмена</string>
+    <string name="SaveButtonValue">Сохранить</string>
+    <string name="BackButtonValue">Назад</string>
+    <string name="EmailLabelValueHint">Введите e-mail</string>
+    <string name="PasswordLabelValueHint">Введите пароль</string>
+    <string name="FirstNameLabelValueHint">Введите имя</string>
+    <string name="SecondNameLabelValueHint">Введите фамилию</string>
+    <string name="title_activity_settings">Настройки</string>
+    <string name="title_activity_login">Вход</string>
+    <string name="title_activity_registration">Регистрация</string>
+    <string name="CommentBlockLabelValue">Комментарии</string>
+    <string name="CommentBlockCommentTitleValue">Добавить комментарий</string>
+    <string name="CommentTextValueHint">Введите ваш комментарий</string>
+    <string name="AddCommentButtonValue">Добавить</string>
+
+</resources>

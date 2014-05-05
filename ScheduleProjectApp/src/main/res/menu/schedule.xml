@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" tools:context="com.example.scheduleprojectapp.ScheduleActivity"
+      android:layout_width="wrap_content" android:layout_height="match_parent">
+    <item android:id="@+id/settings_activity"
+          android:icon="@drawable/ic_action_settings"
+          android:showAsAction="ifRoom"
+          android:title="Настройки профиля" />
+    <item android:id="@+id/refresh_activity"
+          android:icon="@drawable/ic_action_refresh"
+          android:showAsAction="ifRoom"
+          android:title="Обновление расписания" />
+</menu>

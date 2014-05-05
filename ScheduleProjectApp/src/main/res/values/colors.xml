@@ -1,0 +1,36 @@
+
+<resources>
+    <color name="black_overlay">#000000</color>
+    <color name="GreetingTextColor">#FFFFFF</color>
+    <color name="TextColor">#FFFFFF</color>
+    <color name="BackgroundColor">#328FE4</color>
+    <color name="CellColor">#D6E9FA</color>
+    <color name="ButtonColor">#3264E4</color>
+    <color name="ActionBarTextColor">#FFFFFF</color>
+    <color name="ActionBarBackgroundColor">#3264E4</color>
+</resources>
+
+<!--
+<resources>
+    <color name="black_overlay">#000000</color>
+    <color name="GreetingTextColor">#000000</color>
+    <color name="TextColor">#000000</color>
+    <color name="BackgroundColor">#ffffff</color>
+    <color name="CellColor">#000000</color>
+    <color name="ButtonColor">#9C9C9C</color>
+    <color name="ActionBarTextColor">#ffffff</color>
+    <color name="ActionBarBackgroundColor">#000000</color>
+</resources>
+
+<resources>
+    <color name="black_overlay">#66000000</color>
+    <color name="GreetingTextColor">#33B5E5</color>
+    <color name="TextColor">#5EDDFF</color>
+    <color name="BackgroundColor">#0099CC</color>
+    <color name="CellColor">#66E5E5</color>
+    <color name="ButtonColor">#09AFFF</color>
+	<color name="IncorrectDataInField">#f86060</color>
+    <color name="CorrectDataInField">#41D275</color>
+    <color name="ActionBarTextColor">#ffffff</color>
+    <color name="ActionBarBackgroundColor">#33B5E5</color>
+</resources>-->

@@ -1,0 +1,438 @@
+<FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@color/BackgroundColor">
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/scrollView" android:layout_gravity="center_horizontal|bottom">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/BackgroundColor"
+                >
+            <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:id="@id/WeekColorLine" android:src="@drawable/ic_blue_week_line" android:layout_weight="1"/>
+            <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent" android:layout_weight="1">
+                <!--<Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:text="@string/GoToDate"
+                        android:id="@id/OnDateButton" android:textSize="@dimen/SmallTextSize"
+                        android:textColor="@color/TextColor"
+                        android:padding="4dp" android:background="@color/ButtonColor" android:layout_margin="10dp"
+                        android:onClick="OnDateButtonClick"/>-->
+            </TableLayout>
+            <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:paddingBottom="25dp" android:layout_weight="1"
+                    android:paddingTop="25dp">
+                <ImageButton
+                        android:onClick="LeftSwipeButtonClicked"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@id/LeftSwipeButton" android:layout_weight="1" android:src="@drawable/ic_left"
+                        android:layout_gravity="left" android:layout_marginLeft="10dp"/>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:layout_gravity="center_vertical"
+                        android:minWidth="200dp">
+                    <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:id="@id/DayOfWeekET" android:layout_gravity="center_horizontal"
+                            android:textSize="20dp" android:gravity="center_horizontal"
+                            android:textColor="@color/TextColor"/>
+                    <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:id="@id/DateET" android:layout_gravity="center_horizontal" android:textSize="20dp"
+                            android:gravity="center_horizontal" android:textColor="@color/TextColor"/>
+                </LinearLayout>
+                <ImageButton
+                        android:onClick="RightSwipeButtonClicked"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@id/RightSwipeButton" android:layout_weight="1" android:layout_gravity="right"
+                        android:src="@drawable/ic_right" android:layout_marginRight="10dp"/>
+            </TableRow>
+            <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" android:layout_weight="1">
+                <TableLayout
+                        android:id="@+id/content_table"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:stretchColumns="*">
+                    <TableRow
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" android:paddingBottom="5dp">
+                        <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+                            <LinearLayout
+                                    android:background="@drawable/border"
+                                    android:layout_width="109dp"
+                                    android:layout_height="fill_parent" android:layout_marginRight="5dp"
+                                    android:orientation="vertical">
+                                <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="0dp"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:id="@id/FirstLessonTimeStart" android:text="8:00"
+                                        android:textColor="@color/TextColor" android:textStyle="bold|normal"
+                                        android:gravity="center_vertical|center_horizontal" android:layout_weight="1"/>
+                                <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="0dp"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:id="@id/FirstLessonTimeEnd" android:text="9:35"
+                                        android:textColor="@color/TextColor" android:textStyle="bold|normal"
+                                        android:gravity="center_vertical|center_horizontal" android:layout_weight="1"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
+                                <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:id="@id/FirstSubjectET" android:layout_marginLeft="@dimen/CellPagging"
+                                        android:layout_marginTop="@dimen/CellPagging"
+                                        android:textColor="@color/TextColor"/>
+                                <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:layout_marginLeft="@dimen/CellPagging"
+                                        android:layout_marginTop="@dimen/CellPagging" android:id="@id/FirstCabinetET"
+                                        android:textColor="@color/TextColor"/>
+                                <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:id="@id/FirstTeacherET" android:layout_marginLeft="@dimen/CellPagging"
+                                        android:layout_marginTop="@dimen/CellPagging" android:layout_marginBottom="@dimen/CellPagging"
+                                        android:textColor="@color/TextColor"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </TableRow>
+                    <TableRow android:layout_width="fill_parent" android:layout_height="fill_parent"
+                              android:id="@+id/tableRow" android:paddingBottom="5dp">
+                        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent"
+                                      android:layout_height="fill_parent">
+                            <LinearLayout
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical" android:layout_width="109dp"
+                                          android:layout_height="fill_parent" android:layout_marginRight="5dp">
+                                <TextView android:layout_width="fill_parent" android:layout_height="0dp"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/SecondLessonTimeStart" android:text="9:45"
+                                          android:textColor="@color/TextColor" android:textStyle="bold|normal"
+                                          android:gravity="center_vertical|center_horizontal" android:layout_weight="1"/>
+                                <TextView android:layout_width="fill_parent" android:layout_height="0dp"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/SecondTimeLessonEnd" android:text="11:20"
+                                          android:textColor="@color/TextColor" android:textStyle="bold|normal"
+                                          android:gravity="center_vertical|center_horizontal" android:layout_weight="1"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                    android:background="@drawable/border"
+                                    android:orientation="vertical" android:layout_width="fill_parent"
+                                          android:layout_height="fill_parent">
+                                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/SecondSubjectET" android:layout_marginTop="@dimen/CellPagging"
+                                          android:layout_marginLeft="@dimen/CellPagging"
+                                          android:textColor="@color/TextColor"/>
+                                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/SecondCabinetET" android:layout_marginTop="@dimen/CellPagging"
+                                          android:layout_marginLeft="@dimen/CellPagging"
+                                          android:textColor="@color/TextColor"/>
+                                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/SecondTeacherET" android:layout_marginTop="@dimen/CellPagging"
+                                          android:layout_marginBottom="@dimen/CellPagging" android:layout_marginLeft="@dimen/CellPagging"
+                                          android:textColor="@color/TextColor"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </TableRow>
+                    <TableRow android:layout_width="fill_parent" android:layout_height="fill_parent"
+                              android:id="@+id/tableRow2" android:paddingBottom="5dp">
+                        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent"
+                                      android:layout_height="fill_parent">
+                            <LinearLayout android:background="@drawable/border"
+                                          android:orientation="vertical" android:layout_width="109dp"
+                                          android:layout_height="fill_parent" android:layout_marginRight="5dp">
+                                <TextView android:layout_width="fill_parent" android:layout_height="0dp"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/ThirdLessonTimeStart" android:text="11:30"
+                                          android:textColor="@color/TextColor" android:textStyle="bold|normal"
+                                          android:gravity="center_vertical|center_horizontal" android:layout_weight="1"/>
+                                <TextView android:layout_width="fill_parent" android:layout_height="0dp"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/ThirdLessonTimeEnd" android:text="13:05"
+                                          android:textColor="@color/TextColor" android:textStyle="bold|normal"
+                                          android:gravity="center_vertical|center_horizontal" android:layout_weight="1"/>
+                            </LinearLayout>
+                            <LinearLayout android:background="@drawable/border"
+                                          android:orientation="vertical" android:layout_width="fill_parent"
+                                          android:layout_height="fill_parent">
+                                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/ThirdSubjectET" android:layout_marginTop="@dimen/CellPagging"
+                                          android:layout_marginLeft="@dimen/CellPagging"
+                                          android:textColor="@color/TextColor"/>
+                                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/ThirdCabinetET" android:layout_marginTop="@dimen/CellPagging"
+                                          android:layout_marginLeft="@dimen/CellPagging"
+                                          android:textColor="@color/TextColor"/>
+                                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/ThirdTeacherET" android:layout_marginTop="@dimen/CellPagging"
+                                          android:layout_marginBottom="@dimen/CellPagging" android:layout_marginLeft="@dimen/CellPagging"
+                                          android:textColor="@color/TextColor"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </TableRow>
+                    <TableRow android:layout_width="fill_parent" android:layout_height="fill_parent"
+                              android:id="@+id/tableRow3" android:paddingBottom="5dp">
+                        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent"
+                                      android:layout_height="fill_parent">
+                            <LinearLayout android:background="@drawable/border"
+                                          android:orientation="vertical" android:layout_width="109dp"
+                                          android:layout_height="fill_parent" android:layout_marginRight="5dp">
+                                <TextView android:layout_width="fill_parent" android:layout_height="0dp"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/FourthLessonTimeStart" android:text="13:30"
+                                          android:textColor="@color/TextColor" android:textStyle="bold|normal"
+                                          android:gravity="center_vertical|center_horizontal" android:layout_weight="1"/>
+                                <TextView android:layout_width="fill_parent" android:layout_height="0dp"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/FourthLessonTimeEnd" android:text="15:05"
+                                          android:textColor="@color/TextColor" android:textStyle="bold|normal"
+                                          android:gravity="center_vertical|center_horizontal" android:layout_weight="1"/>
+                            </LinearLayout>
+                            <LinearLayout android:background="@drawable/border"
+                                          android:orientation="vertical" android:layout_width="fill_parent"
+                                          android:layout_height="fill_parent">
+                                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/FourthSubjectET" android:layout_marginLeft="@dimen/CellPagging"
+                                          android:layout_marginTop="@dimen/CellPagging"
+                                          android:textColor="@color/TextColor"/>
+                                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:layout_marginLeft="@dimen/CellPagging"
+                                          android:layout_marginTop="@dimen/CellPagging"
+                                          android:id="@id/FourthCabinetET" android:textColor="@color/TextColor"/>
+                                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:layout_marginLeft="@dimen/CellPagging"
+                                          android:layout_marginTop="@dimen/CellPagging" android:layout_marginBottom="@dimen/CellPagging"
+                                          android:id="@id/FourthTeacherET" android:textColor="@color/TextColor"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </TableRow>
+                    <TableRow android:layout_width="fill_parent" android:layout_height="fill_parent"
+                              android:id="@+id/tableRow4" android:paddingBottom="5dp">
+                        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent"
+                                      android:layout_height="fill_parent">
+                            <LinearLayout android:background="@drawable/border"
+                                          android:orientation="vertical" android:layout_width="109dp"
+                                          android:layout_height="fill_parent" android:layout_marginRight="5dp">
+                                <TextView android:layout_width="fill_parent" android:layout_height="0dp"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/FifthLessonTimeStart" android:text="15:15"
+                                          android:textColor="@color/TextColor" android:textStyle="bold|normal"
+                                          android:gravity="center_vertical|center_horizontal" android:layout_weight="1"/>
+                                <TextView android:layout_width="fill_parent" android:layout_height="0dp"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/FifthLessonTimeStop" android:text="16:50"
+                                          android:textColor="@color/TextColor" android:textStyle="bold|normal"
+                                          android:gravity="center_vertical|center_horizontal" android:layout_weight="1"/>
+                            </LinearLayout>
+                            <LinearLayout android:background="@drawable/border"
+                                          android:orientation="vertical" android:layout_width="fill_parent"
+                                          android:layout_height="fill_parent">
+                                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/FifthSubjectET"
+                                          android:layout_marginLeft="@dimen/CellPagging"
+                                          android:layout_marginTop="@dimen/CellPagging"
+                                          android:textColor="@color/TextColor"/>
+                                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/FifthCabinetET"
+                                          android:layout_marginLeft="@dimen/CellPagging"
+                                          android:layout_marginTop="@dimen/CellPagging"
+                                          android:textColor="@color/TextColor"/>
+                                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/FifthTeacherET"
+                                          android:layout_marginLeft="@dimen/CellPagging"
+                                          android:layout_marginTop="@dimen/CellPagging"
+                                          android:layout_marginBottom="@dimen/CellPagging"
+                                          android:textColor="@color/TextColor"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </TableRow>
+                    <TableRow android:layout_width="fill_parent" android:layout_height="fill_parent"
+                              android:id="@+id/tableRow5" android:paddingBottom="5dp">
+                        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent"
+                                      android:layout_height="fill_parent">
+                            <LinearLayout android:background="@drawable/border"
+                                          android:orientation="vertical" android:layout_width="109dp"
+                                          android:layout_height="fill_parent" android:layout_marginRight="5dp">
+                                <TextView android:layout_width="fill_parent" android:layout_height="0dp"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/SixthLessonTimeStart" android:text="17:00"
+                                          android:textColor="@color/TextColor" android:textStyle="bold|normal"
+                                          android:gravity="center_vertical|center_horizontal" android:layout_weight="1"/>
+                                <TextView android:layout_width="fill_parent" android:layout_height="0dp"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/SixthLessonTimeEnd" android:text="18:35"
+                                          android:textColor="@color/TextColor" android:textStyle="bold|normal"
+                                          android:gravity="center_vertical|center_horizontal" android:layout_weight="1"/>
+                            </LinearLayout>
+                            <LinearLayout android:background="@drawable/border"
+                                          android:orientation="vertical" android:layout_width="fill_parent"
+                                          android:layout_height="fill_parent">
+                                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/SixthSubjectET"
+                                          android:layout_marginLeft="@dimen/CellPagging"
+                                          android:layout_marginTop="@dimen/CellPagging"
+                                          android:textColor="@color/TextColor"/>
+                                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/SixthCabinetET"
+                                          android:layout_marginLeft="@dimen/CellPagging"
+                                          android:layout_marginTop="@dimen/CellPagging"
+                                          android:textColor="@color/TextColor"/>
+                                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/SixthTeacherET"
+                                          android:layout_marginLeft="@dimen/CellPagging"
+                                          android:layout_marginTop="@dimen/CellPagging"
+                                          android:layout_marginBottom="@dimen/CellPagging"
+                                          android:textColor="@color/TextColor"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </TableRow>
+                    <TableRow android:layout_width="fill_parent" android:layout_height="fill_parent"
+                              android:id="@+id/tableRow6" android:paddingBottom="5dp">
+                        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent"
+                                      android:layout_height="fill_parent">
+                            <LinearLayout android:background="@drawable/border"
+                                          android:orientation="vertical" android:layout_width="109dp"
+                                          android:layout_height="fill_parent" android:layout_marginRight="5dp">
+                                <TextView android:layout_width="fill_parent" android:layout_height="0dp"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/SeventhLessonTimeStart" android:text="18:45"
+                                          android:textColor="@color/TextColor" android:gravity="center_vertical|center_horizontal"
+                                          android:textStyle="bold|normal" android:layout_weight="1"/>
+                                <TextView android:layout_width="fill_parent" android:layout_height="0dp"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/SeventhLessonTimeEnd" android:text="20:20"
+                                          android:textColor="@color/TextColor" android:gravity="center_vertical|center_horizontal"
+                                          android:textStyle="bold|normal" android:layout_weight="1"/>
+                            </LinearLayout>
+                            <LinearLayout android:background="@drawable/border"
+                                          android:orientation="vertical" android:layout_width="fill_parent"
+                                          android:layout_height="fill_parent">
+                                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/SeventhSubjectET"
+                                          android:layout_marginLeft="@dimen/CellPagging"
+                                          android:layout_marginTop="@dimen/CellPagging"
+                                          android:textColor="@color/TextColor"/>
+                                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/SeventhCabinetET"
+                                          android:layout_marginLeft="@dimen/CellPagging"
+                                          android:layout_marginTop="@dimen/CellPagging"
+                                          android:textColor="@color/TextColor"/>
+                                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                                          android:textAppearance="?android:attr/textAppearanceSmall"
+                                          android:id="@id/SeventhTeacherET"
+                                          android:layout_marginLeft="@dimen/CellPagging"
+                                          android:layout_marginTop="@dimen/CellPagging"
+                                          android:layout_marginBottom="@dimen/CellPagging"
+                                          android:textColor="@color/TextColor"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </TableRow>
+                </TableLayout>
+            </TableRow>
+            <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:id="@id/CommentTableLayout" android:layout_weight="1">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/CommentBlockLabelValue"
+                        android:id="@id/CommentBlockLabel" android:textColor="@color/TextColor"
+                        android:textSize="@dimen/CommentsBlockTextSize" android:paddingLeft="10dp"
+                        android:paddingRight="10dp" android:paddingTop="20dp"/>
+                <TableLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" android:id="@id/CommentBlock" android:paddingLeft="10dp"
+                        android:paddingRight="10dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+                    <TableRow
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" android:paddingLeft="10dp" android:paddingRight="10dp">
+                    </TableRow>
+                </TableLayout>
+            </TableLayout>
+            <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:id="@id/TypingCommentBlock"
+                    android:layout_gravity="bottom" android:layout_weight="1">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/CommentBlockCommentTitleValue"
+                        android:id="@id/TypingCommentBlockTitle" android:textSize="@dimen/CommentsBlockTextSize"
+                        android:textColor="@color/TextColor" android:paddingLeft="10dp" android:paddingRight="10dp"
+                        android:paddingBottom="20dp"/>
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:ems="10"
+                        android:id="@id/CommentTextValue" android:hint="@string/CommentTextValueHint"
+                        android:paddingLeft="10dp" android:paddingRight="10dp" android:textColor="@color/TextColor"
+                        android:textColorHint="@color/TextColor" android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp" android:background="@color/BackgroundColor"/>
+            </TableLayout>
+            <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/AddCommentButtonValue"
+                    android:id="@id/AddCommentButton" android:textColor="@color/TextColor"
+                    android:background="@color/ButtonColor" android:onClick="AddCommentButtonClick"
+                    android:enabled="true" android:clickable="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="@dimen/ButtonLeftMargin"
+                    android:layout_marginRight="@dimen/ButtonRightMargin" android:layout_gravity="bottom"
+                    android:gravity="center_vertical|center_horizontal"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

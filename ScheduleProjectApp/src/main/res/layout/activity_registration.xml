@@ -1,0 +1,136 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/RegistrationContainer"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="upp.scheduleprojApp.RegistrationActivity"
+             tools:ignore="MergeRootFrame" android:background="@color/BackgroundColor">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_gravity="center|top" android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+        <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+            <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/FirstNameLabelValue"
+                        android:id="@+id/textView" android:layout_column="0" android:textColor="@color/TextColor"
+                        android:inputType="none" android:layout_weight="0" android:textSize="@dimen/BasicTextSize"/>
+                <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/FirstNameET" android:layout_column="1" android:textColor="@color/TextColor"
+                        android:layout_weight="2" android:textSize="@dimen/BasicTextSize"
+                        android:hint="@string/FirstNameLabelValueHint" android:textColorHint="@color/TextColor"
+                        android:textIsSelectable="false"/>
+            </TableRow>
+            <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/SecondNameLabelValue"
+                        android:id="@+id/textView2" android:layout_column="0" android:textColor="@color/TextColor"
+                        android:inputType="none" android:layout_weight="0" android:textSize="@dimen/BasicTextSize"/>
+                <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/SecondNameET" android:layout_column="1" android:layout_weight="2"
+                        android:textSize="@dimen/BasicTextSize" android:hint="@string/SecondNameLabelValueHint"
+                        android:textColorHint="@color/TextColor" android:textColor="@color/TextColor"/>
+            </TableRow>
+            <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/EmailLabelValue"
+                        android:id="@+id/textView3" android:layout_column="0" android:textColor="@color/TextColor"
+                        android:inputType="none" android:layout_weight="0" android:textSize="@dimen/BasicTextSize"/>
+                <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:ems="10"
+                        android:id="@+id/EmailET" android:layout_column="1" android:layout_weight="2"
+                        android:textSize="@dimen/BasicTextSize" android:hint="@string/EmailLabelValueHint"
+                        android:textColorHint="@color/TextColor" android:textColor="@color/TextColor"/>
+            </TableRow>
+            <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/PasswordLabelValue"
+                        android:id="@+id/textView4" android:layout_column="0" android:textColor="@color/TextColor"
+                        android:inputType="none" android:layout_weight="0" android:textSize="@dimen/BasicTextSize"/>
+                <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:ems="10"
+                        android:id="@+id/PasswordET" android:layout_column="1" android:layout_weight="2"
+                        android:textSize="@dimen/BasicTextSize" android:hint="@string/PasswordLabelValueHint"
+                        android:textColorHint="@color/TextColor" android:textColor="@color/TextColor"/>
+            </TableRow>
+            <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/PasswordRepeatLabelValue"
+                        android:id="@+id/textView5" android:layout_column="0" android:textColor="@color/TextColor"
+                        android:inputType="none" android:layout_weight="0" android:textSize="@dimen/BasicTextSize"
+                        android:singleLine="false" android:editable="false" android:autoText="false"/>
+                <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:ems="10"
+                        android:id="@+id/PasswordRepeatET" android:layout_column="1" android:layout_weight="2"
+                        android:textSize="@dimen/BasicTextSize" android:hint="@string/PasswordLabelValueHint"
+                        android:textIsSelectable="false" android:textColorHint="@color/TextColor"
+                        android:textColor="@color/TextColor"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_gravity="left|bottom">
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/CancelButtonValue"
+                    android:id="@+id/CancelButton" android:layout_weight="1" android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" android:layout_marginBottom="20dp"
+                    android:background="@color/ButtonColor" android:textColor="@color/TextColor"
+                    android:textSize="@dimen/BasicTextSize" android:onClick="CancelButtonClick"/>
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/RegistrationButtonValue"
+                    android:id="@+id/RegistrationButton" android:layout_weight="1" android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" android:layout_marginBottom="20dp"
+                    android:background="@color/ButtonColor" android:textColor="@color/TextColor"
+                    android:textSize="@dimen/BasicTextSize" android:onClick="RegistrationButtonClick"/>
+        </TableRow>
+    </LinearLayout>
+</FrameLayout>
